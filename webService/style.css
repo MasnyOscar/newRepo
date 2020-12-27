@@ -1,0 +1,73 @@
+body{
+    background-color: rgb(196, 196, 196);
+}
+#container{
+    
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+#logocolor{
+    font-size: 70px;
+    letter-spacing: 3px;
+}
+#B{
+    color: red;
+}
+#L{
+    color: blue;
+}
+#O{
+    color: orange;
+}
+#G{
+    color: green;
+}
+
+#menu{
+    background-color:rgb(41, 18, 18);
+    width: 1000px;
+    padding: 10px;
+    margin-top: 35px;
+    color:white;
+}
+.menuoptions{
+    margin-right: auto;
+    margin-left: auto;
+    float: left;
+    font-size: 33px;
+    font-weight: 400;
+    min-width: 50px;
+    height: 30px;
+    border-right: white dotted;
+    letter-spacing: 4px;
+    padding: 10px;
+}
+.menuoptions:hover{
+    background-color: orange;
+    color:rgb(41, 18, 18);
+    cursor: pointer;
+}
+#cb{
+    clear: both;
+}
+#content{
+    width: 1000px;
+    text-align: justify;
+    font-size: 12px;
+}
+#footer{
+    text-align: justify;
+    text-justify: inter-word;
+    clear: both;
+    margin-top: 15px;
+    font-size: 17px;
+    font-weight: 400px;
+    text-decoration: underline;
+}
