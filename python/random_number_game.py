@@ -1,25 +1,29 @@
-#tutaj zaciagam potrzebne fumckcje itp. z biblioteki
+# pobieranie potrzebnych zasobow
 from random import randint
 
-#tutaj tworze losowa liczbe z danego przedzialy
-random= randint(1, 15)
+# ustawianie przedzialy z ktorego bedzie losowana liczba
+random_number= randint(1, 100)
 
-#tutaj deklaruje zmienna i, ktora bedzie inkrementowana
+# zmienna i potrzebna do iteracji
 i= 0
 
-#tutaj zaczyna sie petla, ktora bedzie trwala dopoki ktps nie poda poprawnej liczby
-while i!=random:
+
+# początek pętli, bedzie sie powtarzać dopóki nie trafimy liczby
+user_number = input("Podaj liczbe od 1 do 100: " )
+while i!= random_number:
     i+=1
-    usr_num = input("Podaj liczbe od 1 do 15: ")
-    if random > int(usr_num):
-        print("\n")
-        print("Podaj wieksza liczbe:")
 
-    elif random < int(usr_num):
-        print("\n")
-        print("Podaj mniejsza liczbe:")
 
-    elif random == int(usr_num):
+    if int(user_number)>random_number:
+        user_number = input("Podaj Mniejszą liczbę: ")
         print("\n")
-        print("Podano poprawną liczbę :)", "za", i,"razem")
+        
+        
+    elif int(user_number)<random_number:
+        user_number = input("Podaj większą liczbę: ")
+        print("\n")
+
+
+    elif int(user_number)==random_number:
+        print("Udało ci się za", i, "razem!")
         break
