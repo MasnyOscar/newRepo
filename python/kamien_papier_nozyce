@@ -1,0 +1,48 @@
+from random import randint
+print("Witaj w grze kamien papier nozyce")
+
+import subprocess
+
+def clrscr():
+    cls = subprocess.call('clear',shell=True)
+    print()
+
+def mechanizm_losowania():
+    user_try = input("""
+    1- kamien
+    2- papier
+    3- nozyce
+    Co wybierasz: """)
+
+    user_try = int(user_try)
+    wylosowany_znak = randint(1, 3)
+    if wylosowany_znak == user_try:
+        print("Remis")
+    elif user_try == 1 and wylosowany_znak == 2:
+        print("Niestety przeciwnik wygral")
+    elif user_try == 2 and wylosowany_znak == 3:
+        print("Niestety przeciwnik wygral")
+    elif user_try == 3 and wylosowany_znak == 1:
+        print("Niestety przeciwnik wygral")
+    elif user_try == 2 and wylosowany_znak == 1:
+        print("Wygrales!")
+    elif user_try == 3 and wylosowany_znak == 2:
+        print("Wygrales!")
+    elif user_try == 1 and wylosowany_znak == 3:
+        print("Wygrales!")
+
+clrscr()
+while True:
+    mechanizm_losowania()
+    kontynuacja = input("Czy chcesz grać dalej (t/n)")
+
+    if kontynuacja == "t" or kontynuacja == "T":
+        clrscr()
+        mechanizm_losowania()
+        kontynuacja = input("Czy chcesz grać dalej (t/n)")
+        if kontynuacja == "n" or kontynuacja == "N":
+            print("KONIEC")
+            break
+    elif kontynuacja == "n" or kontynuacja == "N":
+        print("KONIEC")
+        break
